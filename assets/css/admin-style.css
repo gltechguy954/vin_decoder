@@ -1,0 +1,532 @@
+/* VIN Decoder Admin Styles */
+
+/* VIN Decoder Form */
+.vin-decoder-form { 
+    margin: 20px 0; 
+}
+
+.vin-decoder-form input[type="text"] { 
+    width: 300px; 
+    padding: 8px; 
+    margin-right: 10px; 
+}
+
+.vin-results { 
+    background: #f9f9f9; 
+    padding: 20px; 
+    margin: 20px 0; 
+    border-left: 4px solid #0073aa; 
+}
+
+.vin-results pre { 
+    background: white; 
+    padding: 15px; 
+    border: 1px solid #ddd; 
+    max-height: 400px; 
+    overflow-y: auto; 
+}
+
+.create-listing-form { 
+    margin: 20px 0; 
+    padding: 20px; 
+    background: #fff; 
+    border: 1px solid #ccd0d4; 
+}
+
+.loading { 
+    opacity: 0.6; 
+    pointer-events: none; 
+}
+
+/* AI Fill Button Styles */
+.field-with-ai { 
+    position: relative; 
+}
+
+.ai-fill-btn { 
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+    color: white; 
+    border: none; 
+    padding: 4px 8px; 
+    border-radius: 4px; 
+    font-size: 11px; 
+    cursor: pointer; 
+    margin-left: 8px;
+    transition: all 0.3s ease;
+}
+
+.ai-fill-btn:hover { 
+    transform: translateY(-1px); 
+    box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+}
+
+.ai-fill-btn:disabled { 
+    background: #ccc; 
+    cursor: not-allowed; 
+    transform: none;
+}
+
+.ai-fill-btn.loading { 
+    background: #ffc107; 
+}
+
+.ai-fill-btn.success { 
+    background: #28a745; 
+}
+
+.ai-fill-btn.error { 
+    background: #dc3545; 
+}
+
+/* Field Manager Styles */
+.field-manager-container {
+    max-width: 1400px;
+}
+
+.field-manager-layout {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.field-groups-sidebar {
+    width: 300px;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.field-groups-sidebar h2 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.field-group-item {
+    background: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.field-group-item:hover {
+    border-color: #0073aa;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.field-group-item h3 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+}
+
+.field-group-item .field-count {
+    margin: 0;
+    color: #666;
+    font-size: 13px;
+}
+
+.group-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.group-actions button {
+    padding: 5px 10px;
+    font-size: 12px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.edit-group {
+    background: #0073aa;
+    color: white;
+}
+
+.delete-group {
+    background: #dc3232;
+    color: white;
+}
+
+.add-new-group {
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* Field Manager Main Area */
+.field-manager-main {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.field-manager-tabs {
+    display: flex;
+    gap: 10px;
+    border-bottom: 2px solid #e0e0e0;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    border: none;
+    background: none;
+    font-size: 14px;
+    cursor: pointer;
+    color: #666;
+    transition: all 0.2s;
+}
+
+.tab-button.active {
+    color: #0073aa;
+    border-bottom: 2px solid #0073aa;
+    margin-bottom: -2px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.fields-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.fields-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+/* Fields Grid */
+.fields-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.field-card {
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: all 0.2s;
+}
+
+.field-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.field-card-header {
+    background: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.field-card-header h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.field-type-badge {
+    background: #0073aa;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.field-card-body {
+    padding: 15px;
+}
+
+.field-card-body p {
+    margin: 5px 0;
+    font-size: 13px;
+}
+
+.field-key code {
+    background: #e9ecef;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.field-badges {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.badge {
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.badge.required {
+    background: #dc3545;
+    color: white;
+}
+
+.badge.ai-enabled {
+    background: #764ba2;
+    color: white;
+}
+
+.badge.hidden {
+    background: #6c757d;
+    color: white;
+}
+
+.field-card-actions {
+    background: white;
+    padding: 10px 15px;
+    display: flex;
+    gap: 10px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.field-card-actions button {
+    flex: 1;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 3px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.edit-field {
+    background: #0073aa;
+    color: white;
+}
+
+.delete-field {
+    background: #dc3232;
+    color: white;
+}
+
+/* Modal Styles */
+.vin-modal {
+    position: fixed;
+    z-index: 100000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vin-modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.vin-modal-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+    line-height: 20px;
+}
+
+.vin-modal-close:hover {
+    color: #000;
+}
+
+.field-row {
+    margin-bottom: 20px;
+}
+
+.field-row label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.field-row input[type="text"],
+.field-row input[type="number"],
+.field-row select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.field-row .description {
+    color: #666;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Field Options */
+#field-options-container,
+#field-number-settings {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.field-option-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.field-option-row input {
+    flex: 1;
+}
+
+.remove-option {
+    background: #dc3232;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* NHTSA Mappings */
+.field-mappings-container { 
+    max-width: 1200px; 
+}
+
+.field-mapping-row { 
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 10px; 
+    padding: 10px; 
+    background: #f9f9f9; 
+    border-radius: 4px; 
+}
+
+.field-mapping-row input[type="text"] { 
+    margin-right: 15px; 
+    padding: 8px; 
+    border: 1px solid #ddd; 
+    border-radius: 4px; 
+}
+
+.api-field { 
+    width: 300px; 
+}
+
+.meta-field { 
+    width: 200px; 
+}
+
+.mapping-header { 
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 15px; 
+    font-weight: bold; 
+    padding: 10px; 
+    background: #0073aa; 
+    color: white; 
+    border-radius: 4px; 
+}
+
+.add-field-row { 
+    margin: 20px 0; 
+    padding: 15px; 
+    background: #e7f3ff; 
+    border-radius: 4px; 
+}
+
+.save-mappings { 
+    background: #0073aa; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 4px; 
+    font-size: 16px; 
+    margin-top: 20px; 
+}
+
+/* Notice Styles */
+.notice-success { 
+    background: #d4edda; 
+    border-left: 4px solid #28a745; 
+    padding: 12px; 
+    margin: 20px 0; 
+}
+
+.notice-error { 
+    background: #f8d7da; 
+    border-left: 4px solid #dc3545; 
+    padding: 12px; 
+    margin: 20px 0; 
+}
+
+/* Alert Styles */
+.alert { 
+    padding: 15px; 
+    border-radius: 4px; 
+    margin: 15px 0; 
+}
+
+.alert-info { 
+    background: #d1ecf1; 
+    border-left: 4px solid #17a2b8; 
+    color: #0c5460; 
+}
+
+.alert-warning { 
+    background: #fff3cd; 
+    border-left: 4px solid #ffc107; 
+    color: #856404; 
+}
+
+.alert-success { 
+    background: #d4edda; 
+    border-left: 4px solid #28a745; 
+    color: #155724; 
+}
+
+/* Features Meta Box */
+.feature-fields table {
+    width: 100%;
+}
+
+.feature-fields td {
+    padding: 8px;
+}
+
+.feature-fields label {
+    margin-right: 15px;
+}
